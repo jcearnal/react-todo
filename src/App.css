@@ -1,38 +1,123 @@
-.App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+/* Base styles */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #121212; /* Dark background for dark mode */
+    color: #e0e0e0; /* Light text color for contrast */
+    line-height: 1.6;
   }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+  
+  input, button {
+    font-size: 16px; /* Accessible font size */
   }
-  to {
-    transform: rotate(360deg);
+  
+  button {
+    background-color: #333; /* Darker button background */
+    color: #fff; /* Button text color */
+    border: none;
+    padding: 10px 20px;
+    margin: 5px;
+    border-radius: 5px;
+    cursor: pointer;
   }
-}
+  
+  button:hover {
+    background-color: #444; /* Button hover effect for better interaction feedback */
+  }
+
+  /* Header styles */
+.header {
+    background-color: #333; /* Dark background for the header */
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .logo {
+    width: 50px; /* Adjust based on your logo's size */
+    height: auto;
+    margin-right: 20px;
+  }
+  
+  h1 {
+    margin: 0;
+  }
+  
+  /* Responsive adjustments */
+  @media (max-width: 768px) {
+    .header {
+      flex-direction: column;
+    }
+  
+    .logo {
+      margin-bottom: 10px;
+      margin-right: 0;
+    }
+  }
+  
+  /* Task styles */
+  .task {
+    background-color: #222; /* Slightly lighter background for tasks */
+    color: #fff;
+    padding: 10px;
+    margin: 10px 0;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+  }
+  
+  .task input[type="checkbox"] {
+    margin-right: 20px; /* Space between checkbox and task description */
+  }
+  
+  .task span {
+    flex-grow: 1;
+  }
+  
+  /* TaskInputForm styles */
+  form {
+    display: flex;
+    flex-direction: column;
+    margin: 20px;
+  }
+  
+  form input[type="text"] {
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    border: 1px solid #333;
+    background-color: #333;
+    color: #fff;
+  }
+  
+  form button {
+    align-self: center;
+    width: 100%;
+    max-width: 200px; /* Ensuring button is not too wide on larger screens */
+  }
+  
+  /* Media query for larger screens */
+  @media (min-width: 768px) {
+    form {
+      flex-direction: row;
+      align-items: center;
+    }
+  
+    form input[type="text"] {
+      margin-bottom: 0;
+      margin-right: 10px;
+      flex-grow: 1; /* Input field takes available space */
+    }
+  
+    form button {
+      width: auto;
+      padding: 10px 20px;
+    }
+  
+    .task {
+      justify-content: space-between;
+    }
+  }
